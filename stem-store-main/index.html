@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <title>STEM STORE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <template id="button">
+        <svg viewBox = "0 0 24 24">
+            <defs>
+                <linearGradient class=shine1 x1=0 y1=100% x2=100% y2=0>
+                    <stop class=lowLight offset=0% />
+                    <stop class=highLight offset=100% />
+                </linearGradient>
+                <linearGradient class=shine2 x1=100% y1=0 x2=0 y2=100%>
+                    <stop class=lowLight offset=0% />
+                    <stop class=highLight offset=100% />
+                </linearGradient>
+            </defs>
+            <circle class=outerRing cx=12 cy=12 r=12 />
+            <circle class=innerRing cx=12 cy=12 r=10 />
+            <circle class=mainColor cx=12 cy=12 r=9 />
+            <text x=50% text-anchor="middle" y=50% dominant-baseline=middle class=buttonLabel></text>
+        </svg>
+    </template>
+    <template id="itemCard">
+        <div class=purchaseItem>
+            <div class=cellContainer>
+                <img class=purchaseThumbnail />
+                <div class=purchaseInfo>
+                    <p class=purchaseName></p>
+                    <div class=ticketIndicator></div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <body>
+        <audio id=ripsound preload=auto>
+            <source src=audio/ripsound.mp3 type="audio/mpeg">
+        </audio>
+        <audio id=checkout preload=auto>
+            <source src=audio/checkout.mp3 type="audio/mpeg">
+        </audio>
+        <audio id=clickPop preload=auto>
+            <source src=audio/clickPop.mp3 type="audio/mpeg">
+        </audio>
+        <audio id=notification preload=auto>
+            <source src=audio/notification.mp3 type="audio/mpeg">
+        </audio>
+        <header>
+            <svg id=headerBack viewBox = "0 0 3 1">
+                <path d="
+                M 0 0
+                h 2
+                l 1 1
+                H 0
+                V 0
+                " fill="var(--red)"/>
+                <path d="
+                M 0 0
+                h 1
+                l 1 1
+                H 0
+                V 0
+                " fill="var(--gray)"/>
+            </svg>
+            <img src=images/stemlogo.png id=headerImg>
+            <h1>STEM STORE</h1>
+        </header>
+        <div id=storePage>
+            <div id=ticketBar class=isLarger>
+                <p>
+                <span id=ticketLabel>How Many Tickets Do You Have?</span><span id=ticketAmount></span>
+                </p>
+                <div id=numpadContainer>
+                    <span id=input></span>
+                    <div id=numpad></div>
+                </div>
+                <div id=ticketStack></div>
+                <div id=looseTickets></div>
+            </div>
+            <div id=mainContent class=minimized>
+                <div id=ticketSelect>
+                    <div id=slider> </div>
+                    <p>All</p>
+                    <p>2 Tickets</p>
+                    <p>4 Tickets</p>
+                    <p>8 Tickets</p>
+                    <p>10 Tickets</p>
+                    <p>15 Tickets</p>
+                    <p>30 Tickets</p>
+                    <p>40 Tickets</p>
+                </div>
+                <div id=itemSection>
+                </div>
+            </div>
+            <div id=cart class=minimized>
+                <p>
+                Your Cart
+                </p>
+                <div id=cartContainer>
+                    <p id=hintText>Click on some items to get started.</p>
+                </div>
+                <div id=cartSubmitContainer class=minimized>
+                    <div id=submitIcon class=minimized></div>
+                    <p id=cartSubmit>Check out 🛒</p>
+                </div>
+            </div>
+        </div>
+        <div id=afterScreen class=minimized>
+            <p>Purchased Items:</p>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
