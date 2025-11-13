@@ -1,9 +1,9 @@
 {
-    "2": ["Small Candy", "Sticker", "Buttons", "LEGO Pieces"],
-    "4": ["Small 3D Printed Pokemon", "Sticky Hand", "Wood Glider"],
+    "2": ["Small Candy", "Sticker", "Buttons", "Minis"],
+    "4": ["Pokemon Bookmark", "Small 3D Printed Pokemon", "Sticky Hand", "Wood Glider"],
     "8": ["Large 3D Printed Pokemon", "Rubber Ducky", "Large Candy", "Fidget Toy", "Chaos Emerald", "Animal Mask"],
     "10": ["Foam Rocket", "LEGO Squid", "Sport Fidget Spinner"],
-    "15": ["LEGO Whale", "Large Model Plane", "Small 3D Printed Dragon", "3D Printed Sea Creatures", "Fidget Spinner"],
+    "15": ["LEGO Whale", "Large Model Plane", "Small 3D Printed Dragon", "Sea Creature", "Fidget Spinner"],
     "30": ["Large 3D Printed Dragon"],
     "40": []
 }
