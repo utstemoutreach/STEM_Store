@@ -198,7 +198,7 @@ header svg {
 #itemSection {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .purchaseItem {
