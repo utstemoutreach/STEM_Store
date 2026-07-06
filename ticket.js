@@ -147,14 +147,13 @@ export class Tickets {
         while (this.runningIndex === runningIndex) {
             while (this.propCount() < this.ticketCount) {
                 this.addStackProp();
-                requestAnimationFrame(this.distributeTickets.bind(this));
                 await new Promise(res=>setInterval(res, 15));
             }
             while (this.propCount() > this.ticketCount) {
                 this.ripProp();
-                requestAnimationFrame(this.distributeTickets.bind(this));
                 await new Promise(res=>setInterval(res, 50));
             }
+            requestAnimationFrame(this.distributeTickets.bind(this));
             await this.distributePromise;
         }
     }
