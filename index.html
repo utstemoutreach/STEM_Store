@@ -10,18 +10,11 @@
         <title>STEM STORE</title>
         <link rel="stylesheet" href="style.css">
     </head>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs id="gradient-defs"></defs>
+    </svg>
     <template id="button">
         <svg viewBox = "0 0 24 24">
-            <defs>
-                <linearGradient class=shine1 x1=0 y1=100% x2=100% y2=0>
-                    <stop class=lowLight offset=0% />
-                    <stop class=highLight offset=100% />
-                </linearGradient>
-                <linearGradient class=shine2 x1=100% y1=0 x2=0 y2=100%>
-                    <stop class=lowLight offset=0% />
-                    <stop class=highLight offset=100% />
-                </linearGradient>
-            </defs>
             <circle class=outerRing cx=12 cy=12 r=12 />
             <circle class=innerRing cx=12 cy=12 r=10 />
             <circle class=mainColor cx=12 cy=12 r=9 />
@@ -116,5 +109,6 @@
             <p>Purchased Items:</p>
         </div>
     </body>
-    <script src="index.js"></script>
+    <script src="utils.js"></script>
+    <script src="index.js" type="module"></script>
 </html>
