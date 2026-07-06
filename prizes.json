@@ -1,9 +1,9 @@
 {
     "2": ["Small Candy", "Sticker", "Buttons", "Minis"],
-    "4": ["Pokemon Bookmark", "KPDH Bookmark", "Small 3D Printed Pokemon", "Sticky Hand", "Wood Glider", "Animal Mask"],
-    "8": ["Large 3D Printed Pokemon", "Rubber Ducky", "Large Candy", "Fidget Toy", "Chaos Emerald"],
-    "10": ["Pokemon Minifig", "Foam Rocket", "Sport Fidget Spinner", "DNA Plush","Lego Minecart"],
-    "15": [ "Sea Creature", "Fidget Spinner","Large Model Plane","Bacteria Plush"],
-    "30": ["Hat"],
+    "4": ["Pokemon Bookmark", "KPDH Bookmark", "Small 3D Printed Pokemon", "Sticky Hand", "Animal Mask", "Rubber Ducky", "Glow Critters"],
+    "8": ["Large 3D Printed Pokemon", "Large Candy", "Fidget Toy", "Chaos Emerald", "Foam Rocket"],
+    "10": ["Sea Creature", "Pokemon Minifig", "Sport Fidget Spinner","Lego Minecart"],
+    "15": ["DNA Plush","Large Model Plane"],
+    "30": [ "Sea Cucumber Plush", "Hat"],
     "40": []
 }
