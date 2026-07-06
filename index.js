@@ -84,9 +84,9 @@ function getAvailableLooseTickets() {
 
 function addLooseTicket() {
     let newTicket = document.createElement("img");
-    let left = Math.random() * 100 % 50 - 25;
     newTicket.src = "images/ticket.png";
     newTicket.classList.add("ticket");
+    let left = Math.random() * 100 % 50 - 25;
     newTicket.style.left = left.toString() + "%";
     let rotation = Math.random() * 100 % 20 - 10;
     newTicket.style.transform = "rotate(" + rotation.toString() + "deg)";
@@ -102,7 +102,7 @@ function addStackTicket() {
     ticketStack.appendChild(newTicket);
 }
 
-function addTicket() {
+async function addTicket() {
     if (looseTickets.children.length < getAvailableLooseTickets()) {
         addLooseTicket();
     }
