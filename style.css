@@ -139,8 +139,8 @@ header svg {
 
 .ticket.ripped {
     transition: all 1s ease;
-    /*top:0% !important;*/
-    opacity: 0%;
+    top:0% !important;
+    opacity: 30%;
 }
 
 #ticketStack .ticket {
