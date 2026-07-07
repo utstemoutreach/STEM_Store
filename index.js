@@ -243,7 +243,7 @@ function moveSliderBehind(item) {
 
 function loadMainContent() {
     let ticketMin = 2;
-    let ticketMax = 1000;
+    let ticketMax = 100;
     let ticketCount = 0;
     if (ticketCountOverride == null) {
         ticketCount = parseInt(input.textContent);
@@ -307,7 +307,7 @@ function signal(message, duration) {
         body.removeChild(newMessage);
     }, duration * 1000);
 }
-    
+
 
 function reset() {
     cartItems = {};
