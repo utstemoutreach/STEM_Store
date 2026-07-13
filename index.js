@@ -189,6 +189,7 @@ function loadCard(ticketValue, name) {
     newCard.querySelector(".purchaseThumbnail").src = "images/prizes/" + name + ".jpg";
     newCard.ticketValue = ticketValue;
     newCard.name = name;
+    console.log(newCard.name);
     newCard.onclick = async () => {
         if (tickets.ticketCount >= ticketValue) {
             play("clickPop", 0.1);
@@ -205,27 +206,30 @@ function loadCard(ticketValue, name) {
         newTicket.src = "images/ticket.png";
         ticketIndicator.appendChild(newTicket);
     }
-    itemSection.appendChild(newCard);
+    return newCard;
+}
+
+function addCard(ticketValue, name) {
+    itemSection.appendChild(loadCard(ticketValue, name));
 }
 
 async function loadPrizes(ticketValue) {
     itemSection.innerHTML = "";
     let records = await fetch("prizes.json");
     let recordsJSON = await records.json();
-    console.log(recordsJSON);
     let thisPage = null;
     if (ticketValue === "All") {
         thisPage = [];
         for (let [key, value] of Object.entries(recordsJSON)) {
             for (let item of value) {
-                await loadCard(key, item);
+                addCard(key, item);
             }
         }
     }
     else {
         thisPage = recordsJSON[ticketValue];
         for (let item of thisPage) {
-            await loadCard(ticketValue, item);
+            addCard(ticketValue, item);
         }
     };
     filterCards();
@@ -278,6 +282,10 @@ function loadMainContent() {
 }
 
 function showResults() {
+    if (tickets.ticketCount == 1) {
+        let candy = loadCard(2, "Small Candy");
+        addCartItem(candy);
+    }
     storePage.classList.add("minimized");
     afterScreen.classList.remove("minimized");
     afterScreen.appendChild(cartContainer);
@@ -345,6 +353,7 @@ let tickets = new ticket.Tickets(get("ticketStack"), get("looseTickets"), (numbe
         }
         filterCards();
 });
+
 let ticketCountOverride = null;
 
 window.addEventListener('resize', () => {if (selected) moveSliderBehind(selected)});
